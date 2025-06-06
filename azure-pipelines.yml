@@ -2,7 +2,7 @@ trigger:
   - main
 
 pool:
-  name: 'Azure Pipelines'
+  vmImage: 'ubuntu-latest'
 
 variables:
   nodeVersion: '18.x'
@@ -44,5 +44,5 @@ steps:
     inputs:
       artifactName: 'nodejs-app'
       targetPath: '$(Build.ArtifactStagingDirectory)'
-    displayName: 'Publish pipeline artifact test'
+    displayName: 'Publish pipeline artifact'
 
